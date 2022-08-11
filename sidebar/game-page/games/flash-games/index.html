@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Flash Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="button" id="button-3">
+    <div id="circle"></div>
+    <a href="../../redirect.html"> Home</a>
+  </div>
+<div id="navbar"></div>
+<h1><span>Select</span> <span>Your</span> Game</h1>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Games..." title="Search for Game">
+
+<ul id="myUL">
+<li>
+<a href="henry_stickman1/index.html">Henry Stickmin 1</a></li><li>
+<a href="henry_stickmin3/index.html">Henry Stickmin 3</a></li><li>
+<a href="impossible_quiz/index.html">Impossible Quiz</a></li><li>
+<a href="impossible_quiz2/index.html">Impossible Quiz 2</a></li><li>
+<!--- <a href="learn_to_fly/index.html">Learn To Fly</a></li><li> --->
+<a href="learn_to_fly2/index.html">Learn To Fly 2</a></li><li>
+<a href="line_rider/index.html">Line Rider</a></li><li>
+<a href="run_3/index.html">Run 3</a></li><li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>
